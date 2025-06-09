@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kalkulator druku 3D – Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Kalkulator</a></li>
+      <li><a href="o-nas.html">O nas</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="lang-switch">
+      🌐 <label for="language">Język / Language:</label>
+      <select id="language">
+        <option value="pl">Polski</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div class="currency-switch">
+      💱 <label for="currency">Waluta / Currency:</label>
+      <select id="currency">
+        <option value="PLN">PLN</option>
+        <option value="EUR">EUR</option>
+        <option value="USD">USD</option>
+      </select>
+    </div>
+
+    <h1>Kalkulator kosztów druku 3D</h1>
+
+    <label for="hours">Czas pracy – godziny:</label>
+    <input type="number" id="hours" />
+
+    <label for="minutes">Czas pracy – minuty:</label>
+    <input type="number" id="minutes" />
+
+    <label for="filament">Ilość filamentu (g):</label>
+    <input type="number" id="filament" />
+
+    <label for="filamentPrice">Cena filamentu za 1 kg (zł):</label>
+    <input type="number" id="filamentPrice" step="0.01" />
+
+    <label for="power">Zużycie energii (kWh):</label>
+    <input type="number" id="power" step="0.01" />
+
+    <label for="powerCost">Cena 1 kWh (zł):</label>
+    <input type="number" id="powerCost" step="0.01" />
+
+    <label for="labor">Stawka roboczogodziny (zł/h):</label>
+    <input type="number" id="labor" step="0.01" />
+
+    <button onclick="calculate()">Oblicz</button>
+
+    <div class="result">
+      <div class="result-title">Wynik:</div>
+      <div>
+        <span class="result-cost-label">Całkowity koszt: </span>
+        <span id="totalCost">0 zł</span>
+      </div>
+    </div>
+
+    <div class="affiliate-box">
+      <p>🛒 Polecane filamenty i drukarki:</p>
+      <ul>
+        <li><a href="https://ceneo.pl/1234567" target="_blank">Filament PLA XYZ – Ceneo</a></li>
+        <li><a href="https://allegro.pl/oferta/drukarka-3d-xyz-987654" target="_blank">Drukarka XYZ – Allegro</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
